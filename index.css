@@ -1,0 +1,60 @@
+/* Resetting default margin and padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Basic styling for the page heading */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+/* Basic styling for sections */
+.section {
+    position: relative;
+    float: left;
+    width: 100%; /* Default width for mobile view */
+    padding: 20px;
+    margin-bottom: 20px;
+    border: 1px solid black;
+}
+
+/* Responsive layout for tablet and desktop */
+@media only screen and (min-width: 768px) {
+    .section {
+        width: calc(50% - 20px); /* Adjusting for margins */
+        margin-right: 20px;
+    }
+    .section:nth-child(2n) {
+        margin-right: 0;
+    }
+}
+
+/* Responsive layout for desktop */
+@media only screen and (min-width: 992px) {
+    .section {
+        width: calc(33.333% - 20px); /* Adjusting for margins */
+    }
+}
+
+/* Styling for section titles */
+.section h2 {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ffa500; /* Orange background color for titles */
+    padding: 5px 10px;
+    margin: 0;
+    border: 1px solid black;
+    color: #000; /* Black text color for titles */
+    font-size: 125%; /* 25% larger than dummy text */
+}
+
+/* Styling for dummy text */
+.section p {
+    font-size: 1em;
+}
